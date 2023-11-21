@@ -18,4 +18,4 @@ sudo sed -i "s|listen 80 default_server;|$page|" /etc/nginx/sites-available/defa
 
 # config testing and starting
 sudo nginx -t
-sudo service nginx start
+sudo service nginx restart

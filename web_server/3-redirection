@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# redirecting to another page on nginx
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+echo "Holberton School" | sudo tee /var/www/html/index.html
+
+# redirection config
+replacement="server_name _;\\
+    rewrite ^/redirect_me https://www.linkedin.com/feed/ permanent;"
+sudo sed -i "s|server_name _;|$replacement|" /etc/nginx/sites-available/default
+
+sudo nginx -t
+sudo service nginx start

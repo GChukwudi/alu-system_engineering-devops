@@ -1,3 +1,4 @@
-./0-nginx_likes_port_80: line 6: nnginx: command not found
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
  * Restarting nginx nginx
    ...done.
